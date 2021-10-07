@@ -1,0 +1,16 @@
+
+wget -w 0.05 -r -l0 -nH -e robots=off --span-hosts -np -A '*h08v05*.hdf' –R *.html,*.htm,*.tmp https://e4ftl01.cr.usgs.gov/MOLT/MOD16A2.006/
+
+months = ['01','02','03','04','05','06','07','08','09','10','11','12']
+
+for yr in range(2001,2021):
+    for mo in months:
+
+
+    wget -r l0 -nH -A '*h08v05*.hdf' –R *.html,*.htm,*.tmp -i url.txt
+
+
+
+wget --user cowherd --password Iwannaknow1 -np -r -l1 -A "*h08v05*.hdf" https://e4ftl01.cr.usgs.gov/MOLT/MOD16A2.006/2001.01.01/
+
+wget --user cowherd --password Iwannaknow1 -np -r -l1 -A "*h08v05*.hdf" -i url.txt
