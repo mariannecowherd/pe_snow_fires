@@ -1,5 +1,6 @@
 # large files
 watershed_masks/
+data/SN_SWE_WY*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
