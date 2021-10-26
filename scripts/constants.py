@@ -1,6 +1,7 @@
 ## file to define values and folders
 import geopandas as gpd
 import numpy as np
+import matplotlib
 
 home_dir='/users/marianne/documents/pe_snow_fires/'
 
@@ -8,6 +9,16 @@ pe_data_dir = '/users/marianne/documents/pe_snow_fires/data/'
 sn_watersheds= gpd.read_file(pe_data_dir + 'sn_watersheds.shp')
 data_dir = '/users/marianne/documents/data/'
 mtbs= gpd.read_file(data_dir + 'mtbs_perimeter_data/mtbs_perims_DD.shp')
+
+blues = matplotlib.cm.get_cmap('Blues', 256)
+newcolors = blues(np.linspace(0, 1.5, 256))
+pink = np.array([248/256, 24/256, 148/256, 1])
+white = np.array([1,1,1,0])
+newcolors[:10, :] = white
+newcmp = matplotlib.colors.ListedColormap(newcolors)
+ 
+kwargs = {"cmap": newcmp, "vmax": 1}
+
 
 names = ['Sacramento',
             'Feather',
