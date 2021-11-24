@@ -1,13 +1,17 @@
 ## file to define values and folders
 import geopandas as gpd
-import numpy as np
 import matplotlib
+import numpy as np
+import os
 
-home_dir='/users/marianne/documents/pe_snow_fires/'
+path = os.path.expanduser('~')
 
-pe_data_dir = '/users/marianne/documents/pe_snow_fires/data/'
+
+home_dir=path + '/documents/pe_snow_fires/'
+
+pe_data_dir = path + '/documents/pe_snow_fires/data/'
 sn_watersheds= gpd.read_file(pe_data_dir + 'sn_watersheds.shp')
-data_dir = '/users/marianne/documents/data/'
+data_dir = path + '/documents/data/'
 mtbs= gpd.read_file(data_dir + 'mtbs_perimeter_data/mtbs_perims_DD.shp')
 fire_sn = gpd.read_file(home_dir + 'firebounds_sn.gdf')
 
