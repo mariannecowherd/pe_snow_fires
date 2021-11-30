@@ -4,6 +4,11 @@ import matplotlib
 import numpy as np
 import os
 
+def normalize(data):
+    avg = np.nanmean(data)
+    out = (data-avg)/avg
+    return out
+    
 path = os.path.expanduser('~')
 
 
