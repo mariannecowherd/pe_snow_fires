@@ -18,7 +18,7 @@ pe_data_dir = path + '/documents/pe_snow_fires/data/'
 sn_watersheds= gpd.read_file(pe_data_dir + 'sn_watersheds.shp')
 data_dir = path + '/documents/data/'
 mtbs= gpd.read_file(data_dir + 'mtbs_perimeter_data/mtbs_perims_DD.shp')
-fire_sn = gpd.read_file(home_dir + 'firebounds_sn.gdf')
+fire_sn = gpd.read_file(pe_data_dir + 'firebounds_sn.gdf')
 
 blues = matplotlib.cm.get_cmap('Blues', 256)
 newcolors = blues(np.linspace(0, 1.5, 256))
